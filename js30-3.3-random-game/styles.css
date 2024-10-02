@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rs-logo {
+  width: 50px;
+}
+
+.footer-text {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.gh-link {
+  color: #ffb749;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+}
