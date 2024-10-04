@@ -62,17 +62,24 @@ body {
 .image-container {
   position: relative;
   overflow: hidden;
+  height: 200px;
 }
 
 .image-dust {
   width: 300px;
+  transform: translateY(135px);
 }
 
 .image-mole {
   width: 110px;
   position: absolute;
   left: 21%;
-  top: 26%;
+  top: 30%;
   z-index: -1;
-  clip-path: url(#dirt-clip);
+  transform: translateY(130px);
+  transition: all 0.5s ease-in-out;
+}
+
+.image-none {
+  transform: translateY(0px);
 }
