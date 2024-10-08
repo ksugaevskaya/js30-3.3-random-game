@@ -1,11 +1,16 @@
 const holes = document.querySelectorAll(".image-dust");
 const moles = document.querySelectorAll(".image-mole");
 const score = document.querySelector(".score");
+let lastHole;
 
 const randomHole = () => {
   const allHoles = holes.length;
   const index = Math.random() * holes.length;
   const result = Math.floor(index);
+  if (result === lastHole) {
+    return randomHole();
+  }
+  lastHole = result;
   return result;
 };
 
