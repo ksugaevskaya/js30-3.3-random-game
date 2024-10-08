@@ -16,5 +16,17 @@ const randomHole = () => {
 
 const moleUp = () => {
   const resultRandomHole = randomHole();
-  moles[resultRandomHole].className = "image-mole image-none";
+  const resultRandomTime = randomTime(500, 1000);
+  moles[resultRandomHole].className = "image-mole image-visible";
+  setTimeout(() => {
+    moles[resultRandomHole].className = "image-mole";
+  }, resultRandomTime);
 };
+
+const randomTime = (min, max) => {
+  return Math.random() * (max - min) + min;
+};
+
+setInterval(() => {
+  moleUp();
+}, 1000);
