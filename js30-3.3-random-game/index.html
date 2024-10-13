@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Random Game</title>
+    <script src="./game.js" defer> </script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./assets/images/favicon.ico">
+
+
+</head>
+
+<body>
+    <main>
+
+        <div id="game-start" class="game-start">
+
+            <span class="small-text"> <b>RULES: </b></span>
+            <span class="small-text-start"> <i> The challenge of the game is simple. You are to
+                    face 6 holes, each hole having a mole ready to pop up. When a mole pops up, you must hit it with
+                    the cursor to score. </i> </span>
+            <span id="start-button" class="start-button"> START GAME </span>
+        </div>
+
+        <div id="game-over" class="game-over none">
+            <span> GAME OVER </span>
+            <span class="small-text"> <i> <b> YOUR SCORE: </b> </i> <i><span id="your-score">0 </span></i></span>
+            <span class="small-text"> <i> <b> BEST SCORE: </b> </i> <i> <span id="best-score">0 </span></i></span>
+            <svg id="restart" class="scale" xmlns="http://www.w3.org/2000/svg" viewBox="3 3 16 16">
+                <circle cx="11" cy="-1041.36" r="8" transform="matrix(1 0 0-1 0-1030.36)" opacity=".98"
+                    fill="##ffb749" />
+                <path
+                    d="m120.6 38.723c-3.312-7.713-7.766-14.367-13.36-19.961-5.595-5.594-12.248-10.05-19.962-13.361-7.713-3.314-15.805-4.97-24.278-4.97-7.984 0-15.71 1.506-23.18 4.521-7.468 3.01-14.11 7.265-19.92 12.751l-10.593-10.511c-1.63-1.684-3.503-2.064-5.622-1.141-2.173.924-3.259 2.527-3.259 4.808v36.5c0 1.412.516 2.634 1.548 3.666 1.033 1.032 2.255 1.548 3.667 1.548h36.5c2.282 0 3.884-1.086 4.807-3.259.923-2.118.543-3.992-1.141-5.622l-11.162-11.243c3.803-3.585 8.148-6.341 13.04-8.27 4.889-1.928 9.994-2.893 15.317-2.893 5.649 0 11.04 1.101 16.17 3.3 5.133 2.2 9.572 5.174 13.32 8.922 3.748 3.747 6.722 8.187 8.922 13.32 2.199 5.133 3.299 10.523 3.299 16.17 0 5.65-1.1 11.04-3.299 16.17-2.2 5.133-5.174 9.573-8.922 13.321-3.748 3.748-8.188 6.722-13.32 8.921-5.133 2.2-10.525 3.3-16.17 3.3-6.464 0-12.574-1.412-18.332-4.236-5.757-2.824-10.618-6.816-14.583-11.977-.38-.543-1-.87-1.874-.979-.815 0-1.494.244-2.037.733l-11.162 11.244c-.434.436-.665.991-.692 1.67-.027.68.15 1.29.53 1.833 5.921 7.17 13.09 12.724 21.509 16.661 8.419 3.937 17.3 5.907 26.642 5.907 8.473 0 16.566-1.657 24.279-4.97 7.713-3.313 14.365-7.768 19.961-13.361 5.594-5.596 10.05-12.248 13.361-19.961 3.313-7.713 4.969-15.807 4.969-24.279 0-8.474-1.657-16.564-4.97-24.277"
+                    fill="#fff" transform="matrix(.07192 0 0 .07192 6.674 6.768)" />
+            </svg>
+        </div>
+
+        <div id="top-results" class="top-results none">
+            <span class="small-text"> <b>TOP 10 RESULTS: </b> </span>
+            <div id="table-results">
+                <p> 1</p>
+                <p> 2 </p>
+                <p> 3 </p>
+                <p> 4 </p>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+                <p>9</p>
+                <p>10</p>
+            </div>
+        </div>
+
+        <div class="score">
+            <span class="score-text"> Wrack a mole! </span>
+            <span class="score-points"> 0 </span>
+            <div>
+                <span id="score-time" class="score-time"> 0:30 </span>
+            </div>
+        </div>
+
+
+        <div class="images">
+            <div class="image-container">
+                <img class="image-dust" draggable="false" src="./assets/svg/dirt.svg" alt="dirt">
+                <img class="image-mole" draggable="false" src="./assets/svg/mole.svg" alt="mole">
+            </div>
+            <div class="image-container">
+                <img class="image-dust" draggable="false" src="./assets/svg/dirt.svg" alt="dirt">
+                <img class="image-mole" draggable="false" src="./assets/svg/mole.svg" alt="mole">
+            </div>
+            <div class="image-container">
+                <img class="image-dust" draggable="false" src="./assets/svg/dirt.svg" alt="dirt">
+                <img class="image-mole" draggable="false" src="./assets/svg/mole.svg" alt="mole">
+            </div>
+            <div class="image-container">
+                <img class="image-dust" draggable="false" src="./assets/svg/dirt.svg" alt="dirt">
+                <img class="image-mole" draggable="false" src="./assets/svg/mole.svg" alt="mole">
+            </div>
+            <div class="image-container">
+                <img class="image-dust" draggable="false" src="./assets/svg/dirt.svg" alt="dirt">
+                <img class="image-mole" draggable="false" src="./assets/svg/mole.svg" alt="mole">
+            </div>
+            <div class="image-container">
+                <img class="image-dust" draggable="false" src="./assets/svg/dirt.svg" alt="dirt">
+                <img class="image-mole" draggable="false" src="./assets/svg/mole.svg" alt="mole">
+            </div>
+        </div>
+
+        <audio id="sound" src="./assets/sound/kick.mp3"></audio>
+        <audio id="background-music" autoplay loop src="./assets/sound/background-music.mp3"></audio>
+        <audio id="game-over-music" src="./assets/sound/game_over.mp3"></audio>
+        <audio id="click" src="./assets/sound/click.mp3"></audio>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <a class="gh-link" href="https://github.com/ksugaevskaya" target="_blank"> Ksenia's Github </a>
+            <span class="footer-text"> 2024 </span>
+            <a class="rs-logo" href="https://rs.school/courses/javascript-preschool-ru" target="_blank"><img
+                    src="./assets/svg/rss-logo.svg"></a>
+        </div>
+
+
+    </footer>
+</body>
