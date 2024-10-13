@@ -44,6 +44,7 @@ const moleUp = () => {
   moles[resultRandomHole].className = "image-mole image-visible";
   moles[resultRandomHole].addEventListener("click", onMoleClicked);
   setTimeout(() => {
+    moles[resultRandomHole].removeEventListener("click", onMoleClicked);
     moles[resultRandomHole].className = "image-mole";
   }, resultRandomTime);
 };
@@ -59,6 +60,7 @@ let i = 0;
 const onMoleClicked = () => {
   score.innerHTML = ++i;
   moles[lastHole].className = "image-mole";
+  moles[lastHole].removeEventListener("click", onMoleClicked);
   sound.play();
 };
 
